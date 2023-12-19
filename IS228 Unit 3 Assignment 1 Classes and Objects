@@ -1,0 +1,100 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+class Player {
+public:
+    Player(const std::string& name, int health, int attack)
+        : name(name), health(health), attack(attack) {}
+
+    bool isAlive() const {
+        return health > 0;
+    }
+
+    void takeDamage(int damage) {
+        health -= damage;
+    }
+
+    void attackEnemy(class Enemy& enemy);
+
+    const std::string& getName() const {
+        return name;
+    }
+
+private:
+    std::string name;
+    int health;
+    int attack;
+};
+
+class Enemy {
+public:
+    Enemy(const std::string& name, int health, int attack)
+        : name(name), health(health), attack(attack) {}
+
+    bool isAlive() const {
+        return health > 0;
+    }
+
+    void takeDamage(int damage) {
+        health -= damage;
+    }
+
+    void attackPlayer(class Player& player);
+
+    const std::string& getName() const {
+        return name;
+    }
+
+private:
+    std::string name;
+    int health;
+    int attack;
+};
+
+void Player::attackEnemy(Enemy& enemy) {
+    int damage = rand() % attack + 1;
+    enemy.takeDamage(damage);
+    std::cout << name << " attacks " << enemy.getName() << " for " << damage << " damage." << std::endl;
+}
+
+void Enemy::attackPlayer(Player& player) {
+    int damage = rand() % attack + 1;
+    player.takeDamage(damage);
+    std::cout << name << " attacks " << player.getName() << " for " << damage << " damage." << std::endl;
+}
+
+void battle(Player& player, Enemy& enemy) {
+    std::cout << "A wild " << enemy.getName() << " appears!" << std::endl;
+
+    while (player.isAlive() && enemy.isAlive()) {
+        player.attackEnemy(enemy);
+        if (!enemy.isAlive()) {
+            std::cout << enemy.getName() << " has been defeated!" << std::endl;
+            break;
+        }
+
+        enemy.attackPlayer(player);
+        if (!player.isAlive()) {
+            std::cout << player.getName() << " has been defeated. Game over!" << std::endl;
+            break;
+        }
+
+        std::cout << player.getName() << "'s health: " << player.isAlive() << " | " << enemy.getName() << "'s health: " << enemy.isAlive() << std::endl;
+    }
+}
+
+int main() {
+    srand(static_cast<unsigned>(time(0))); // Seed for random number generation
+
+    std::string playerName;
+    std::cout << "Enter your player name: ";
+    std::cin >> playerName;
+
+    Player player(playerName, 100, 20);
+    Enemy enemy("Goblin", 50, 10);
+
+    battle(player, enemy);
+
+    return 0;
+}
