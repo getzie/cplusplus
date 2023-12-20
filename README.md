@@ -23,6 +23,15 @@ IS228 Unit 5 Assignment 1 C++ Project
 ![image](https://github.com/getzie/cplusplus/assets/65036121/2621e596-aa80-40d9-b323-bec7a57a3fe9)
 ![image](https://github.com/getzie/cplusplus/assets/65036121/a8100d55-20b8-471c-b53d-e74ab610e035)
 
+IS228 Unit 6 Assignment 2 C++ Project Completion
+![image](https://github.com/getzie/cplusplus/assets/65036121/62ad196b-86cc-48d8-9f5e-6d4255457992)
+![image](https://github.com/getzie/cplusplus/assets/65036121/ae6456cb-e4e3-43ec-8beb-c42580d32024)
+![image](https://github.com/getzie/cplusplus/assets/65036121/170225f1-e320-45d0-8f3f-157844bc97b2)
+![image](https://github.com/getzie/cplusplus/assets/65036121/1ff604e2-e466-48db-9978-4d29619ecb9a)
+![image](https://github.com/getzie/cplusplus/assets/65036121/cc1e2e75-971b-4ac7-83fc-f2af0a5831f9)
+![image](https://github.com/getzie/cplusplus/assets/65036121/a6e6da95-070b-4f6c-b7fb-fb3eda8f9833)
+![image](https://github.com/getzie/cplusplus/assets/65036121/2621e596-aa80-40d9-b323-bec7a57a3fe9)
+![image](https://github.com/getzie/cplusplus/assets/65036121/a8100d55-20b8-471c-b53d-e74ab610e035)
 
 
 
