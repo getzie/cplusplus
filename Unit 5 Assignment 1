@@ -1,0 +1,84 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+class HotelRoom {
+public:
+    int roomNumber;
+    bool isReserved;
+
+    HotelRoom(int number) : roomNumber(number), isReserved(false) {}
+};
+
+class Hotel {
+private:
+    std::vector<HotelRoom> rooms;
+
+public:
+    Hotel(int numRooms) {
+        // Initialize hotel rooms
+        for (int i = 1; i <= numRooms; ++i) {
+            rooms.push_back(HotelRoom(i));
+        }
+    }
+
+    void displayAvailableRooms() const {
+        std::cout << "Available Rooms:" << std::endl;
+        for (const auto& room : rooms) {
+            if (!room.isReserved) {
+                std::cout << "Room " << room.roomNumber << std::endl;
+            }
+        }
+    }
+
+    void reserveRoom(int roomNumber) {
+        for (auto& room : rooms) {
+            if (room.roomNumber == roomNumber && !room.isReserved) {
+                room.isReserved = true;
+                std::cout << "Room " << roomNumber << " reserved successfully." << std::endl;
+                return;
+            }
+        }
+        std::cout << "Room " << roomNumber << " is not available or does not exist." << std::endl;
+    }
+};
+
+int main() {
+    // Create a hotel with 10 rooms
+    Hotel hotel(10);
+
+    int choice;
+    do {
+        // Display menu
+        std::cout << "\nHotel Management System Menu:" << std::endl;
+        std::cout << "1. Display Available Rooms" << std::endl;
+        std::cout << "2. Reserve a Room" << std::endl;
+        std::cout << "3. Add More Features (To be implemented)" << std::endl;
+        std::cout << "4. Exit" << std::endl;
+        std::cout << "Enter your choice: ";
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1:
+                hotel.displayAvailableRooms();
+                break;
+            case 2:
+                int roomNumber;
+                std::cout << "Enter the room number you want to reserve: ";
+                std::cin >> roomNumber;
+                hotel.reserveRoom(roomNumber);
+                break;
+            case 3:
+                // Additional features can be added in the future
+                std::cout << "Feature to be implemented later." << std::endl;
+                break;
+            case 4:
+                std::cout << "Exiting the program. Goodbye!" << std::endl;
+                break;
+            default:
+                std::cout << "Invalid choice. Please enter a valid option." << std::endl;
+        }
+    } while (choice != 4);
+
+    return 0;
+}
