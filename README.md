@@ -8,3 +8,7 @@ IS228 Unit 3 Assignment 1 Classes and Objects
 ![image](https://github.com/getzie/cplusplus/assets/65036121/e8751087-df78-4835-9679-cfeb1c6c3f82)
 ![image](https://github.com/getzie/cplusplus/assets/65036121/765d30ec-13b8-4475-862a-1d8f3b2cfe79)
 ![image](https://github.com/getzie/cplusplus/assets/65036121/34cfc789-0c5c-4bed-b3d4-1f57a86b1e20)
+
+IS228 Unit 4 Assignment 1 Objects, Classes, and Inheritance
+![image](https://github.com/getzie/cplusplus/assets/65036121/d95f00db-3b8f-4033-a730-fd24fd9de5cc)
+![image](https://github.com/getzie/cplusplus/assets/65036121/62e61300-b831-4770-9ff1-326e6ae39a04)
